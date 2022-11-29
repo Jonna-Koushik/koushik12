@@ -1,0 +1,8 @@
+vpin=1234
+pin=int(input("enter pin:"))
+if(pin==vpin):
+    print("valid-pin")
+    print("continue transaction")
+else:
+    print("in-valid")
+    print("incorrect pin please try again")
