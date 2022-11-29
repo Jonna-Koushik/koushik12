@@ -1,0 +1,16 @@
+sno=input("enter student number:")
+sname=input("enter studet name:")
+group=input("enter student group:")
+s1=int(input("enter english marks:"))
+s2=int(input("enter maths marks:"))
+s3=int(input("enter physics marks:"))
+s4=int(input("enter chemistry marks:"))
+s5=int(input("enter computer marks:"))
+s6=int(input("enter programming marks:"))
+print("sno=",sno)
+print("name=",sname)
+print("group=",gruop)
+if((s1>35)&(s2>35)&(s3>35)&(s4>35)&(s5>35)&(s6>35)):
+    print("pass")
+else:
+    print("fail")
