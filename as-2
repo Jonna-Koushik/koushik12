@@ -1,0 +1,22 @@
+eno=input("enter employee number:")
+ename=input("enter employee name:")
+edes=input("enter employee designation:")
+bs=eval(input("enter emplotee basic salary:"))
+hra=int(input("enter hra:"))
+da=int(input("enter da:"))
+ta=int(input("enter ta:"))
+total=bs+da+ta+hra
+if(total>100000):
+    tax=total*10/100
+elif(total>500000):
+    tax=total*7/100
+elif(total>200000):
+    tax=total*2/100
+elif(total>200000):
+    tax=0
+print("Employee number:",eno)
+print("Employee name:",ename)
+print("Employee Designation:",edes)
+print("Basic Salary:",bs)
+print("tax:",tax)
+print("Net Salary:",total)
