@@ -1,0 +1,7 @@
+year=int(input())
+    if year%4==0 and year%100!=0:
+        print('leep year')
+    elif year%400==0:
+        print('leep year')
+    else:
+        print('not a leep year')
