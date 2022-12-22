@@ -1,0 +1,12 @@
+number=int(input('enter the number you want to check:'))
+temp=number
+c=0;b=''
+for i in range(len(str(number))):
+    c=number%10
+    b=b+str(c)
+    number=number
+d=int(b)
+if(d==temp):
+    print('number is plaindrome')
+else:
+    print('number is not plaindrome')
