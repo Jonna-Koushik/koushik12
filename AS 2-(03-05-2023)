@@ -1,0 +1,12 @@
+paragraph = "this is aditya degree college"
+char_freq = {}
+for char in paragraph:
+    if char.isalpha():
+        char_freq[char.lower()] = char_freq.get(char.lower(), 0) + 1
+most_common_char = ''
+max_freq = 0
+for char, freq in char_freq.items():
+    if freq > max_freq:
+        most_common_char = char
+        max_freq = freq
+print(f"The most repeated character is '{most_common_char}' with a frequency of {max_freq}.")
