@@ -1,0 +1,14 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+start, end = map(int, input("Enter the range start and end values: ").split())
+prime_sum = 0
+for num in range(start, end + 1):
+    if is_prime(num):
+        prime_sum += num
+print("The sum of prime numbers from", start, "to", end, "is:", prime_sum)
+
