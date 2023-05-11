@@ -1,0 +1,16 @@
+def calculate_sum(arr, L, R):
+    return sum(arr[L:R+1])
+N = int(input("Enter the size of the array: "))
+arr = []
+for _ in range(N):
+    num = int(input("Enter an integer: "))
+    arr.append(num)
+Q = int(input("Enter the number of queries: "))
+for _ in range(Q):
+    L = int(input("Enter the value of L: "))
+    R = int(input("Enter the value of R: "))
+    if L < 0 or R >= N:
+        print("Invalid query. L and R should be within the array bounds.")
+    else:
+        result = calculate_sum(arr, L, R)
+        print("Sum:", result)
