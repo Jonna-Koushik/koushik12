@@ -1,0 +1,21 @@
+def count_subarrays_greater_than_k(arr, k):
+    count = 0  
+    current_sum = 0  
+    start = 0  
+
+    for end in range(len(arr)):
+        if arr[end] > k:
+            start = end + 1
+            current_sum = 0
+            continue
+
+        current_sum = max(arr[end], current_sum + arr[end])  
+
+        if current_sum > k:
+            count += end - start + 1  
+
+    return count
+array = [1, 2, 3, 4, 5]
+k = 9
+result = count_subarrays_greater_than_k(array, k)
+print("Count of subarrays with maximum sum greater than", k, ":", result)
