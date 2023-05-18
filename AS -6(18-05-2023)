@@ -1,0 +1,18 @@
+def count_subarrays_product_greater_than_equal_to_k(arr, k):
+    count = 0  
+    max_product = 1 
+    start = 0 
+
+    for end in range(len(arr)):
+        max_product *= arr[end]  
+        while max_product >= k:
+            max_product /= arr[start] 
+            start += 1
+
+        count += end - start + 1  
+    return count
+array = [1, 2, 3, 4, 5]
+k = 10
+result = count_subarrays_product_greater_than_equal_to_k(array, k)
+print("Count of subarrays with maximum product greater than or equal to", k, ":", result)
+
