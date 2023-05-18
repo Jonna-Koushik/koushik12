@@ -1,0 +1,15 @@
+def count_subarrays_less_than_k(arr, k):
+    count = 0  
+    current_sum = 0 
+    start = 0
+    for end in range(len(arr)):
+        current_sum += arr[end]
+        while current_sum >= k:
+            current_sum -= arr[start]  
+            start += 1
+            count += end - start + 1  
+    return count
+array = [1, 2, 3, 4, 5]
+k = 9
+result = count_subarrays_less_than_k(array, k)
+print("Count of subarrays with maximum sum less than", k, ":", result)
