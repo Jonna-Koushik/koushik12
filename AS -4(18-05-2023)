@@ -1,0 +1,23 @@
+def count_subarrays_equal_to_k(arr, k):
+    count = 0  
+    current_sum = 0  
+    start = 0
+    for end in range(len(arr)):
+        current_sum += arr[end]  
+
+        while current_sum > k:
+            current_sum -= arr[start]  
+            start += 1
+
+        if current_sum == k:
+            count += 1  
+
+    return count
+
+
+
+array = [1, 2, 3, 4, 5]
+k = 9
+result = count_subarrays_equal_to_k(array, k)
+print("Count of subarrays with maximum sum equal to", k, ":", result)
+
