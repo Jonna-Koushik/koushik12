@@ -1,0 +1,16 @@
+def is_power_of(base, num):
+    power = 0
+    while base ** power <= num:
+        if base ** power == num:
+            return True
+        power += 1
+    return False
+def check_powers(base, limit):
+    for num in range(1, limit + 1):
+        if is_power_of(base, num):
+            print(f"{num} is a power of {base}")
+        else:
+            print(f"{num} is not a power of {base}")
+base_num = int(input("Enter the base number: "))
+limit_num = int(input("Enter the limit number: "))
+check_powers(base_num, limit_num)
